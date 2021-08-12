@@ -78,7 +78,7 @@
 }
 
 .pio-action .pio-close {
-    background-image: url("https://cdn.jsdelivr.net/gh/ialoe/live2d@master/live2d/lib/close.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/ialoe/live2d@master/live2d/lib/close.svg");
 }
 html[theme="dark"] .pio-action .pio-night{
     background-image: url("https://cdn.jsdelivr.net/gh/ialoe/live2d@master/live2d/lib/sun.svg");
@@ -113,7 +113,7 @@ html[theme="dark"] .pio-action .pio-night{
     // 添加自定义样式
     addStyle(CUSTOM_CSS)
 
-    加载圣·嘉然()
+    load_live2d()
 
     console.log("all done.")
   });
@@ -150,7 +150,7 @@ html[theme="dark"] .pio-action .pio-night{
 
   let pio_reference // pio实例
 
-  function 加载圣·嘉然() {
+  function load_live2d() {
     pio_reference = new Paul_Pio(initConfig)
 
     // pio_alignment = "right" // 右下角
@@ -159,11 +159,11 @@ html[theme="dark"] .pio-action .pio-night{
     const closeBtn = document.querySelector(".pio-container .pio-action .pio-close")
     closeBtn.insertAdjacentHTML('beforebegin', '<span class="pio-music"></span>')
     const music = document.querySelector(".pio-container .pio-action .pio-music")
-    // 返回顶部
+    // 音乐播放器
     music.onclick = function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-    topBtn.onmouseover = function () {
+    music.onmouseover = function () {
       pio_reference.modules.render("想来一首音乐么吗？");
     };
 
