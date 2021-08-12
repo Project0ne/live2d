@@ -113,7 +113,7 @@ html[theme="dark"] .pio-action .pio-night{
     // 添加自定义样式
     addStyle(CUSTOM_CSS)
 
-    load_live2d()
+    加载圣·嘉然()
 
     console.log("all done.")
   });
@@ -150,7 +150,7 @@ html[theme="dark"] .pio-action .pio-night{
 
   let pio_reference // pio实例
 
-  function load_live2d() {
+  function 加载圣·嘉然() {
     pio_reference = new Paul_Pio(initConfig)
 
     // pio_alignment = "right" // 右下角
